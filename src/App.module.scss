@@ -1,0 +1,12 @@
+.AppContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+  align-items: flex-start;
+  justify-content: center;
+  box-sizing: border-box;
+  gap: 1rem;
+  padding: 1rem;
+  
+  
+
+}

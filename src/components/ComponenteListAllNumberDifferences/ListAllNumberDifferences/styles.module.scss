@@ -1,0 +1,61 @@
+.ListAllNumbersDifferencesContainer {
+  display: FLEX;
+  
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: white;
+ 
+  padding: 1rem;
+  h3 {
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    word-spacing: 0.1rem;
+    font-size: 0.8rem;
+    color: rgba(0, 0, 0, 0.637);
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+      sans-serif;
+  }
+  .NumerosContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    align-items: center;
+     column-gap: 1rem;
+    
+    .Numeros {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      justify-self: center;
+      text-align: center;
+      width: 45px;
+      color: white;
+      height: 45px;
+      font-size: 1.5rem;
+      margin-top: 1rem;
+      background-color: rgb(4, 118, 248);
+      cursor: pointer;
+      border-radius: 100%;
+      transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+      box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+      &:hover{
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.52), 0px 4px 4px rgba(0, 0, 0, 0.52)
+      }
+    }
+  }
+
+  .EmptyContainer {
+    width: 100%;
+    text-align: center;
+    margin-top: 3rem;
+
+    h3 {
+      justify-self: center;
+      font-size: 0.75rem;
+      color: #3356;
+    }
+
+    img {
+      width: 5rem;
+    }
+  }
+}

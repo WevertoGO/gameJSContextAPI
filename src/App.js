@@ -1,24 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import styles from "./App.module.scss";
+import { CrudPlayers } from "./components/ComponentPlayers/CrudPlayers";
+import { CrudQuina } from "./components/ComponentQuina/CrudQuina";
+
+import { QuinaProvider } from "./contexts/QuinaProvider/index";
+import { PlayersProvider } from "./contexts/PlayersProvider/index";
+import ListAllNumberDifferences from "./components/ComponenteListAllNumberDifferences/ListAllNumberDifferences";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <PlayersProvider>
+      <QuinaProvider>
+        <div className={styles.AppContainer}>
+          <CrudQuina />
+          <ListAllNumberDifferences />
+          <CrudPlayers />
+        </div>
+      </QuinaProvider>
+    </PlayersProvider>
   );
 }
 
